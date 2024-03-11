@@ -170,7 +170,7 @@ p {
 }
 
 .hero .btn {
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .hero-img-box {
@@ -248,7 +248,7 @@ p {
 
 .project-img-box {
   width: 100%;
-  height: 20rem;
+  height: 15rem;
 }
 
 .project-img {
@@ -307,14 +307,14 @@ p {
 .project-title-box {
   display: flex;
   align-items: center;
-  height: 5.5rem;
+  height: 4rem;
   margin-bottom: 1rem;
 }
 
 .project-title {
   color: var(--text-dark);
   margin: 0;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 700;
 }
 
@@ -341,9 +341,9 @@ p {
 .project-description {
   color: var(--text-dark);
   margin-bottom: 2.5rem;
-  line-height: 2rem;
-  font-size: 1.8rem;
-  height: 8rem;
+  line-height: 2.5rem;
+  font-size: 1.5rem;
+  height: 7rem;
 }
 
 .project-btn-box {
@@ -358,8 +358,8 @@ p {
 }
 
 .project-btn {
-  padding: 1rem 1.5rem;
-  font-size: 1.7rem;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.2rem;
   border-radius: 12px;
   color: var(--text-light);
   background-color: var(--bg-color);
