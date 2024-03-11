@@ -1,0 +1,223 @@
+:root {
+  --bg-color: #1e1e1e;
+  --main-color: #78a083;
+  --main-color-darker: #54715c;
+  --secondary-color: #ffffff;
+
+  --text-light: #ffffff;
+}
+
+/***********************************/
+/* RE-USABLES COMPONENTS */
+/***********************************/
+.grid {
+  display: grid;
+  row-gap: 9.6rem;
+  column-gap: 6.4rem;
+}
+
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--4-cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grid--5-cols {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+/***********************************/
+/* GENERAL COMPONENTS */
+/***********************************/
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  background-color: var(--bg-color);
+  color: var(--text-light);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.5rem rgba(230, 125, 34, 0.5);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #555;
+
+  /* this is to hide the navigation in the right side */
+  /* only works if there is nothing absolutely positioned into the body */
+  /* x means only in horizontal */
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 7rem;
+  margin-bottom: 3rem;
+  letter-spacing: 12px;
+}
+
+h2 {
+  font-size: 4rem;
+  color: var(--secondary-color);
+}
+
+h2 span {
+  color: var(--main-color);
+}
+
+p {
+  font-size: 1.7rem;
+  line-height: 3rem;
+  color: var(--secondary-color);
+}
+
+.container {
+  max-width: 120rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
+
+.heading-primary,
+.heading-secondary,
+.heading-tertiary {
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: var(--text-light);
+}
+
+.btn,
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  font-size: 2rem;
+  padding: 0.6rem 4.8rem;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: all 0.5s;
+  background-color: var(--main-color);
+  color: #fff;
+  border: none;
+}
+
+.btn--full:link,
+.btn--full:visited {
+  background-color: var(--main-color);
+  color: #fff;
+}
+
+.btn--full:hover,
+.btn--full:active {
+  background-color: var(--secondary-color);
+  cursor: pointer;
+  color: var(--main-color-darker);
+}
+
+/***********************************/
+/* HERO SECTION */
+/***********************************/
+
+.hero {
+  max-width: 120rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 9.6rem;
+  align-items: center;
+  padding: 5.2rem 3.2rem;
+}
+
+.hi-text {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  margin: 0 0 0.5rem 0.3rem;
+}
+
+.hero-name {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--main-color);
+  margin-bottom: 1rem;
+}
+
+.hero-description {
+  margin-bottom: 2.5rem;
+}
+
+.hero .btn {
+  font-weight: 800;
+}
+
+.hero-img-box {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hero-img-box img {
+  width: 100%;
+}
+
+/***********************************/
+/* MY SKILLS SECTION */
+/***********************************/
+
+.skills-section {
+  padding: 9.6rem 0;
+}
+
+.skills-section p {
+  margin: 1.5rem 0 5rem 0;
+  font-size: 2rem;
+}
+
+.skills-section p span {
+  font-weight: 800;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  column-gap: 3.5rem;
+  row-gap: 3rem;
+}
+
+.skill-card {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  flex-direction: column;
+  padding: 1.5rem 0;
+  border: 3px solid var(--main-color);
+}
+
+.skill-card p {
+  color: var(--bg-color);
+  margin: 0;
+  font-weight: 700;
+  margin-top: 1rem;
+}
+
+.skill {
+  width: 40%;
+}
+
+/***********************************/
+/* MY SKILLS SECTION */
+/***********************************/
