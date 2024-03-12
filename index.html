@@ -9,8 +9,27 @@
     <title>JB Portfolio</title>
   </head>
   <body>
+    <header class="container">
+      <a class="logo-link" href="#">
+        <div class="jb-logo-box">
+          <img class="jb-logo" src="assets/logo-jb.png" alt="jb logo" />
+          <p class="jb-name"><span>J</span>ess<span>B</span>aguio</p>
+        </div>
+      </a>
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li><a href="#" class="main-nav-link">Home</a></li>
+          <li><a href="#skills" class="main-nav-link">Skills</a></li>
+          <li><a href="#projects" class="main-nav-link">Projects</a></li>
+          <li><a href="#about" class="main-nav-link">About Me</a></li>
+          <li><a href="#contact" class="main-nav-link">Contact</a></li>
+          <button class="btn btn--full">Download CV</button>
+        </ul>
+      </nav>
+    </header>
+
     <main>
-      <section class="hero-section">
+      <section id="home" class="hero-section">
         <div class="hero">
           <div class="hero-text">
             <p class="hi-text">Hi I am</p>
@@ -28,7 +47,7 @@
         </div>
       </section>
 
-      <section class="skills-section">
+      <section id="skills" class="skills-section">
         <div class="container">
           <h2>My <span>Skills</span></h2>
           <p class="section-subtitle">
@@ -262,8 +281,7 @@
                 </div>
                 <p class="project-description">
                   Admin side of the iCare Mobile App. This is where the
-                  Government of Tagum can check or view the concerns of the
-                  citizens.
+                  Government can check or view the concerns of the citizens.
                 </p>
                 <div class="project-btns">
                   <button class="project-btn btn">Source Code</button>
@@ -359,7 +377,7 @@
         </div>
       </section>
 
-      <div class="about-me-section">
+      <div id="about" class="about-me-section">
         <div class="container">
           <h2>About <span>Me</span></h2>
           <p class="section-subtitle">
@@ -380,6 +398,44 @@
                 provident tempore! Iste officia dolorem repudiandae laboriosam
                 molestias?
               </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="contact" class="contact-section">
+        <div class="container">
+          <div class="contact-box">
+            <h2>Contact <span>Me</span></h2>
+            <p class="section-subtitle">
+              Lets <span>work</span> and achieve
+              <span>great things </span>together.
+            </p>
+            <div class="">
+              <div class="contact-details">
+                <img
+                  src="assets/icons/email.png"
+                  alt="email icon"
+                  class="contact-icon"
+                />
+                <p class="contact">jsmrkbaguio@gmail.com</p>
+              </div>
+              <div class="contact-details">
+                <img
+                  src="assets/icons/facebook.png"
+                  alt="facebook icon"
+                  class="contact-icon"
+                />
+                <p class="contact">@jb.dev.freelancer</p>
+              </div>
+              <div class="contact-details">
+                <img
+                  src="assets/icons/telephone.png"
+                  alt="telephone icon"
+                  class="contact-icon"
+                />
+                <p class="contact">09926890336</p>
+              </div>
             </div>
           </div>
         </div>
