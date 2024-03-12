@@ -15,7 +15,37 @@ const obs = new IntersectionObserver(
     // in the viewport
     root: null,
     threshold: 0,
-    rootMargin: "-650px",
+    rootMargin: "-600px",
   }
 );
 obs.observe(sectionHeroEl);
+
+// Smooth scrolling animation for all browsers
+const allLinks = document.querySelectorAll("a:link");
+allLinks.forEach(function (link) {
+  link.addEventListener("click", function (e) {
+    e.preventDefault();
+    const href = link.getAttribute("href");
+
+    //  to scroll back to top
+    if (href === "#") {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }
+
+    //  Scroll to other links section
+    if (href !== "#" && href.startsWith("#")) {
+      const sectionEl = document.querySelector(href);
+      sectionEl.scrollIntoView({
+        behavior: "smooth",
+      });
+    }
+
+    //  to close mobile nav after clicking links to sectoion\
+    if (link.classList.contains("main-nav-link")) {
+      headerEl.classList.toggle("nav-open");
+    }
+  });
+});
