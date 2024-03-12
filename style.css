@@ -134,10 +134,14 @@ p {
   font-weight: 800;
 }
 
+.section-link-spacer {
+  padding: 9.6rem;
+}
+
 /***********************************/
 /* NAV SECTION */
 /***********************************/
-header {
+.header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -195,28 +199,39 @@ header {
   color: var(--main-color);
 }
 
-header .btn {
+.header .btn {
   font-size: 1.5rem;
   padding: 1.5rem 3rem;
   font-weight: 700;
+}
+
+.sticky .header {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 0 4.8rem;
+  height: 9.6rem;
+  z-index: 9999;
+  box-shadow: 0 1rem 2.3rem var(--main-color-darker);
+  background-color: var(--bg-color);
+}
+
+.sticky .hero-section {
+  margin-top: 19.2rem;
 }
 
 /***********************************/
 /* HERO SECTION */
 /***********************************/
 
-.hero-section {
-  padding: 5rem 0;
-}
-
 .hero {
   max-width: 120rem;
-  margin: 0 auto;
+  margin: 9.6rem auto 0 auto;
   display: grid;
   grid-template-columns: 1.3fr 1fr;
   gap: 9.6rem;
   align-items: center;
-  padding: 5.2rem 3.2rem;
 }
 
 .hi-text {
@@ -254,10 +269,6 @@ header .btn {
 /***********************************/
 /* MY SKILLS SECTION */
 /***********************************/
-
-.skills-section {
-  padding: 9.6rem 0;
-}
 
 .skills-grid {
   display: grid;
@@ -297,9 +308,6 @@ header .btn {
 /***********************************/
 /* MY SKILLS SECTION */
 /***********************************/
-.projects-section {
-  padding: 9.6rem 0;
-}
 
 .projects-grid {
   display: grid;
@@ -467,7 +475,7 @@ header .btn {
 /***********************************/
 
 .about-me-section {
-  padding: 9.6rem 0;
+  padding-bottom: 19.3rem;
 }
 
 .about-me-col {
