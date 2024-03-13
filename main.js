@@ -20,32 +20,36 @@ const obs = new IntersectionObserver(
 );
 obs.observe(sectionHeroEl);
 
-// Smooth scrolling animation for all browsers
-const allLinks = document.querySelectorAll("a:link");
-allLinks.forEach(function (link) {
-  link.addEventListener("click", function (e) {
-    e.preventDefault();
-    const href = link.getAttribute("href");
+// Smooth scrolling animation for all browsers within main-nav
+const mainNav = document.querySelector(".main-nav");
 
-    //  to scroll back to top
-    if (href === "#") {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
-    }
+if (mainNav) {
+  const allLinks = mainNav.querySelectorAll("a:link");
+  allLinks.forEach(function (link) {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+      const href = link.getAttribute("href");
 
-    //  Scroll to other links section
-    if (href !== "#" && href.startsWith("#")) {
-      const sectionEl = document.querySelector(href);
-      sectionEl.scrollIntoView({
-        behavior: "smooth",
-      });
-    }
+      // to scroll back to top
+      if (href === "#") {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      }
 
-    //  to close mobile nav after clicking links to sectoion\
-    if (link.classList.contains("main-nav-link")) {
-      headerEl.classList.toggle("nav-open");
-    }
+      // Scroll to other links section
+      if (href !== "#" && href.startsWith("#")) {
+        const sectionEl = document.querySelector(href);
+        sectionEl.scrollIntoView({
+          behavior: "smooth",
+        });
+      }
+
+      // to close mobile nav after clicking links to section
+      if (link.classList.contains("main-nav-link")) {
+        headerEl.classList.toggle("nav-open");
+      }
+    });
   });
-});
+}
