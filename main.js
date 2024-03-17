@@ -15,7 +15,7 @@ const obs = new IntersectionObserver(
     // in the viewport
     root: null,
     threshold: 0,
-    rootMargin: "-600px",
+    rootMargin: "-80px",
   }
 );
 obs.observe(sectionHeroEl);
@@ -53,3 +53,11 @@ if (mainNav) {
     });
   });
 }
+
+// Make mobile navigation work
+const btnNavEl = document.querySelector(".btn-mobile-nav");
+const headerEl = document.querySelector(".header");
+
+btnNavEl.addEventListener("click", function () {
+  headerEl.classList.toggle("nav-open");
+});

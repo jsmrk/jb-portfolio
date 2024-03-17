@@ -1,0 +1,324 @@
+:root {
+  --bg-color: #1e1e1e;
+  --main-color: #78a083;
+  --main-color-darker: #222e25;
+
+  --secondary-color: #ffffff;
+
+  --text-light: #ffffff;
+  --text-dark: #000;
+}
+
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+
+  .enlarge-img {
+    height: 80%;
+  }
+}
+
+@media (max-width: 69em) {
+  .hero {
+    gap: 6.5rem;
+  }
+
+  .enlarge-img {
+    height: 80%;
+  }
+}
+
+@media (max-width: 63em) {
+  .hero {
+    gap: 5rem;
+  }
+
+  h1 {
+    font-size: 5rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+  }
+
+  .sticky .header {
+    padding: 0 0;
+  }
+
+  .project-title {
+    font-size: 1.8rem;
+  }
+
+  .project-description {
+    font-size: 1.3rem;
+  }
+  .enlarge-img {
+    height: 80%;
+  }
+}
+
+@media (max-width: 57em) {
+  h1 {
+    font-size: 4.5rem;
+  }
+
+  .project-description {
+    font-size: 1.1rem;
+  }
+
+  .enlarge-img {
+    height: 80%;
+  }
+}
+
+@media (max-width: 50em) {
+  h1 {
+    font-size: 4.5rem;
+  }
+
+  .hero-name {
+    font-size: 2.1rem;
+  }
+
+  .hero {
+    gap: 5rem;
+    margin: 7.5rem auto 0 auto;
+  }
+
+  .hero-img-box img {
+    width: 115%;
+  }
+
+  .project-description {
+    font-size: 1rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 4rem;
+    row-gap: 3.5rem;
+  }
+
+  .skill {
+    width: 50%;
+  }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 5rem;
+    row-gap: 5rem;
+  }
+
+  .project-title {
+    font-size: 2rem;
+  }
+
+  .project-description {
+    font-size: 1.5rem;
+  }
+
+  .about-me-img-box img {
+    width: 80%;
+  }
+
+  /* MOBILE NAVIGATION SETTINGS */
+  .main-nav {
+    background-color: var(--main-color);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    transform: translateX(100%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in;
+
+    /* to hide the navigation */
+    /* by using this: it doesnt allow transition */
+    /* display: none; */
+
+    /* 1. solution to hide it visually */
+    opacity: 0;
+
+    /* 2. to make it unaccessible to mouse and keyboard */
+    pointer-events: none;
+
+    /* 3. to hide it feom screen readers */
+    visibility: hidden;
+  }
+
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    color: var(--text-light);
+    font-weight: 700;
+    font-size: 3rem;
+  }
+
+  .btn-mobile-nav {
+    display: block;
+    z-index: 9999;
+  }
+
+  .nav-open .main-nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .nav-open .icon-mobile-nav[name="close-outline"] {
+    display: block;
+  }
+
+  .menu {
+    color: #fff;
+  }
+
+  .nav-open .icon-mobile-nav[name="menu-outline"] {
+    display: none;
+  }
+
+  .main-nav-list {
+    flex-direction: column;
+    gap: 4.8rem;
+  }
+
+  .header .btn {
+    font-size: 2.5rem;
+    background-color: #fff;
+    color: var(--main-color-darker);
+  }
+
+  .enlarge-img {
+    height: 40%;
+  }
+}
+
+@media (max-width: 40em) {
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  .hero-name {
+    font-size: 1.8rem;
+  }
+
+  .hero .btn {
+    font-weight: 700;
+    padding: 0.8rem 4rem;
+    letter-spacing: -0.05rem;
+    font-size: 1.8rem;
+  }
+
+  .hero-img-box img {
+    width: 115%;
+  }
+
+  .project-description {
+    font-size: 1.3rem;
+  }
+
+  .about-me-col {
+    margin-top: 5rem;
+    gap: 2rem;
+  }
+
+  .about-me-img-box img {
+    width: 90%;
+  }
+}
+
+@media (max-width: 34em) {
+  .hero {
+    grid-template-columns: 1fr;
+    margin: 3rem auto 0 auto;
+  }
+
+  .hero-img-box {
+    grid-row: 1;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+
+  .hero-name {
+    font-size: 2.5rem;
+  }
+
+  h1 {
+    font-size: 3.8rem;
+  }
+
+  .desc {
+    font-size: 1.9rem;
+    letter-spacing: 0.5px;
+  }
+
+  .project-description {
+    font-size: 1rem;
+  }
+
+  .hero-img-box img {
+    width: 50%;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 5rem;
+    row-gap: 3rem;
+  }
+
+  .skill {
+    width: 50%;
+  }
+
+  .project-title {
+    font-size: 1.5rem;
+  }
+
+  .project-description {
+    font-size: 1.3rem;
+    line-height: 1.5;
+  }
+
+  .about-me-img-box img {
+    width: 80%;
+  }
+
+  .contact-section {
+    padding: 5rem 0;
+  }
+
+  .contact-details {
+    display: flex;
+    margin: 1rem 0;
+  }
+
+  .contact-icon {
+    height: 3rem;
+  }
+
+  .contact {
+    font-size: 1.5rem;
+    margin-left: 3rem;
+  }
+
+  .enlarge-img {
+    height: 45%;
+  }
+
+  .about-me-col {
+    grid-template-columns: 1fr;
+  }
+
+  .about-me-img-box img {
+    width: 50%;
+    margin-bottom: 15px;
+  }
+}
