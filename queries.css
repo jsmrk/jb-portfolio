@@ -322,3 +322,101 @@
     margin-bottom: 15px;
   }
 }
+
+@media (max-width: 25em) {
+  .section-link-spacer {
+    padding: 7rem;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    margin: 3rem auto 0 auto;
+  }
+
+  .hero-img-box {
+    grid-row: 1;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+
+  .hero-name {
+    font-size: 2.5rem;
+  }
+
+  h1 {
+    font-size: 4.5rem;
+  }
+
+  .desc {
+    font-size: 1.5rem;
+    letter-spacing: 0.5px;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 3rem;
+    row-gap: 3rem;
+  }
+
+  .project-description {
+    font-size: 1rem;
+  }
+
+  .hero-img-box img {
+    width: 80%;
+  }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    column-gap: 5rem;
+    row-gap: 5rem;
+  }
+
+  .enlarge-img {
+    height: 35%;
+  }
+
+  .project-title {
+    font-size: 2.3rem;
+  }
+
+  .project-description {
+    font-size: 1.5rem;
+    line-height: 1.5;
+  }
+
+  .about-me-col {
+    grid-template-columns: 1fr;
+  }
+
+  .about-me-img-box img {
+    width: 80%;
+    margin-bottom: 15px;
+  }
+
+  .contact-section {
+    padding: 5rem 0;
+  }
+
+  .about-me-section p {
+    font-size: 1.7rem;
+    line-height: 30px;
+  }
+
+  .contact-details {
+    display: flex;
+    margin: 1rem 0;
+  }
+
+  .contact-icon {
+    height: 3rem;
+  }
+
+  .contact {
+    font-size: 1.5rem;
+    margin-left: 3rem;
+  }
+}
