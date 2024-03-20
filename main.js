@@ -15,7 +15,7 @@ const obs = new IntersectionObserver(
     // in the viewport
     root: null,
     threshold: 0,
-    rootMargin: "-80px",
+    rootMargin: "90px",
   }
 );
 obs.observe(sectionHeroEl);

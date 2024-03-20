@@ -231,6 +231,21 @@
   .about-me-img-box img {
     width: 90%;
   }
+
+  .footer-box {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .copyright {
+    margin-top: 1.5rem;
+    font-size: 1.3rem;
+  }
+
+  .logo-footer {
+    display: none;
+  }
 }
 
 @media (max-width: 34em) {
