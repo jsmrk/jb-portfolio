@@ -1,0 +1,114 @@
+/* eslint-disable @typescript-eslint/ban-types */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+import { SelectedPage } from "@/shared/types";
+import { motion } from "framer-motion";
+
+import useMediaQuery from "@/hooks/useMediaQuery";
+import HomeImage from "@/assets/hero-image.png";
+import HomeText from "@/assets/hero-text.png";
+import ActionButton from "@/shared/actionButton";
+import AnchorLink from "react-anchor-link-smooth-scroll";
+
+type Props = { setSelectedPage: (value: SelectedPage) => void };
+
+const Home = ({ setSelectedPage }: Props) => {
+  const isBelowSmallScreen = useMediaQuery("(max-width: 425px)");
+  const isAboveLargeScreen = useMediaQuery("(min-width: 1440px)");
+
+  return (
+    <section id="home" className="gap-16 bg-gray-20 py-10 md:h-full md:pb-0">
+      {/* IMAGE AND MAIN HEADER*/}
+      <motion.div
+        className={`${isAboveLargeScreen ? " w-4/6 justify-between" : " w-5/6 items-center justify-center"} md:flex md:mt-0 mt-[80px] mx-auto h-full items-center justify-center`}
+        onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
+      >
+        {/* MAIN HEADER */}
+        <div className="z-10 mt-3 md:basis-3/5">
+          {/* HEADINGS */}
+          <motion.div
+            className="md:-mt-20"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 1.5 }}
+            variants={{
+              hidden: { opacity: 0, x: -50 },
+              visible: { opacity: 1, x: 0 },
+            }}
+          >
+            <div className="relative">
+              <div className="before:absolute before:-top-20 before:-left-20 before:z-[-1] md:before:content-evolvetext">
+                <img src={HomeText} alt="home-page-text" />
+              </div>
+            </div>
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ duration: 1.5, delay: 0.2 }}
+              variants={{
+                hidden: { opacity: 0, x: -50 },
+                visible: { opacity: 1, x: 0 },
+              }}
+            >
+              <p
+                className={`mt-3 mb-11 ${isBelowSmallScreen ? "text-l" : "text-xl"}`}
+              >
+                Hi, I am{" "}
+                <span className="text-primary-100 font-bold">
+                  Jess Mark A. Baguio
+                </span>
+                <br />
+                <span
+                  className={`font-bold ${isBelowSmallScreen ? "text-xl" : "text-2xl"}`}
+                >
+                  a web and mobile developer
+                </span>
+              </p>
+            </motion.div>
+          </motion.div>
+          {/* ACTIONS BUTTON */}
+          <motion.div
+            className="mt-8 flex items-center gap-8 md:justify-start"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 1.5, delay: 0.5 }}
+            variants={{
+              hidden: { opacity: 0, x: -50 },
+              visible: { opacity: 1, x: 0 },
+            }}
+          >
+            <ActionButton setSelectedPage={setSelectedPage}>
+              <AnchorLink
+                className="font-bold "
+                onClick={() => setSelectedPage(SelectedPage.Contact)}
+                href={`${SelectedPage.Contact}`}
+              >
+                Hire me
+              </AnchorLink>
+            </ActionButton>
+            <AnchorLink
+              className="text-sm font-bold text-primary-500 underline hover:text-primary-100"
+              onClick={() => setSelectedPage(SelectedPage.Projects)}
+              href={`${SelectedPage.Projects}`}
+            >
+              <p>See Projects</p>
+            </AnchorLink>
+          </motion.div>
+        </div>
+
+        {/* IMAGE  */}
+        <div className="flex basis-2/5 md:basis-3/5 justify-center md:z-10 md:ml-40 md:mt-0 mt-11 md:justify-items-end">
+          <img
+            src={HomeImage}
+            alt="home-page-graphic"
+            className="sm:max-w-[400px]"
+          />
+        </div>
+      </motion.div>
+    </section>
+  );
+};
+
+export default Home;

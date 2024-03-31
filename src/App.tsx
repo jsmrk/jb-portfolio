@@ -3,9 +3,10 @@ import { useState, useEffect } from "react";
 import "./App.css";
 import { SelectedPage } from "./shared/types";
 import Navbar from "./navBar/navBar";
+import Home from "./home/home";
 
 function App() {
-    const [selectedPage, setSelectedPage] = useState<SelectedPage>(
+  const [selectedPage, setSelectedPage] = useState<SelectedPage>(
     SelectedPage.Home
   );
   const [isTopOfPage, setIsTopOfPage] = useState<boolean>(true);
@@ -21,7 +22,7 @@ function App() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-  
+
   return (
     <>
       <Navbar
@@ -29,6 +30,7 @@ function App() {
         setSelectedPage={setSelectedPage}
         isTopOfPage={isTopOfPage}
       />
+      <Home setSelectedPage={setSelectedPage} />
     </>
   );
 }
