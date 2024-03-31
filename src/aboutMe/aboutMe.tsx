@@ -13,7 +13,7 @@ const AboutMe = ({ setSelectedPage }: Props) => {
   const isAboveLargeScreen = useMediaQuery("(min-width: 1440px)");
 
   return (
-    <section id="aboutme" className="md:h-4/5">
+    <section id="aboutme" className="h-4/5 mx-auto">
       <div>
         <img src={TopWave} alt="" />
       </div>

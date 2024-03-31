@@ -28,7 +28,7 @@ const Navbar = ({ selectedPage, setSelectedPage, isTopOfPage }: Props) => {
 
   const flexBetween = "flex items-center justify-between";
   const navbarSettings = isTopOfPage
-    ? "py-11  bg-transparent w-full py-6"
+    ? "py-11  bg-transparent w-full py-6 before:absolute before:-top-1 before:left-0 before:z-[-1] before:content-headerwave w-full"
     : "drop-shadow py-6 bg-bg-primary";
 
   return (
@@ -37,9 +37,7 @@ const Navbar = ({ selectedPage, setSelectedPage, isTopOfPage }: Props) => {
         className={`${navbarSettings} ${flexBetween} fixed w-full top-0 z-30 `}
       >
         {isAboveMediumScreen ? (
-          <div
-            className={` before:absolute before:-top-1 before:left-0 before:z-[-1] before:content-headerwave w-full`}
-          >
+          <div className={`w-full `}>
             <div
               className={`${flexBetween} mx-auto ${isAboveLargeScreen ? " w-4/6" : " w-5/6"}`}
             >

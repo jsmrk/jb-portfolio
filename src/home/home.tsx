@@ -16,7 +16,10 @@ const Home = ({ setSelectedPage }: Props) => {
   const isAboveLargeScreen = useMediaQuery("(min-width: 1440px)");
 
   return (
-    <section id="home" className="gap-16 bg-gray-20 pt-10 md:h-4/5 md:pb-0">
+    <section
+      id="home"
+      className="gap-16 bg-gray-20 pt-10 md:h-4/5 md:mt-11 md:pb-0"
+    >
       {/* IMAGE AND MAIN HEADER*/}
       <motion.div
         className={`${isAboveLargeScreen ? " w-4/6 justify-center" : " w-5/6 items-center justify-center"} md:flex md:mt-0 mx-auto h-full items-center justify-center`}

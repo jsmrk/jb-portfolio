@@ -13,8 +13,8 @@ function ActionButton({ children, setSelectedPage }: Props) {
   return (
     <AnchorLink
       className=" bg-primary-100 rounded-2xl text-white py-2.5 px-7 hover:bg-white hover:text-primary-100 hover:cursor-pointer transition duration-300 flex items-center justify-between gap-3"
-      onClick={() => setSelectedPage(SelectedPage.ContactUs)}
-      href={`#${SelectedPage.ContactUs}`}
+      onClick={() => setSelectedPage(SelectedPage.Contact)}
+      href={`#${SelectedPage.Contact}`}
     >
       {children}
     </AnchorLink>
