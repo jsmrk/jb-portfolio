@@ -4,6 +4,7 @@ import "./App.css";
 import { SelectedPage } from "./shared/types";
 import Navbar from "./navBar/navBar";
 import Home from "./home/home";
+import AboutMe from "./aboutMe/aboutMe";
 
 function App() {
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(
@@ -31,6 +32,7 @@ function App() {
         isTopOfPage={isTopOfPage}
       />
       <Home setSelectedPage={setSelectedPage} />
+      <AboutMe setSelectedPage={setSelectedPage} />
     </>
   );
 }
