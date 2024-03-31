@@ -16,17 +16,17 @@ const Home = ({ setSelectedPage }: Props) => {
   const isAboveLargeScreen = useMediaQuery("(min-width: 1440px)");
 
   return (
-    <section id="home" className="gap-16 bg-gray-20 py-10 md:h-full md:pb-0">
+    <section id="home" className="gap-16 bg-gray-20 pt-10 md:h-4/5 md:pb-0">
       {/* IMAGE AND MAIN HEADER*/}
       <motion.div
-        className={`${isAboveLargeScreen ? " w-4/6 justify-between" : " w-5/6 items-center justify-center"} md:flex md:mt-0 mt-[80px] mx-auto h-full items-center justify-center`}
+        className={`${isAboveLargeScreen ? " w-4/6 justify-center" : " w-5/6 items-center justify-center"} md:flex md:mt-0 mx-auto h-full items-center justify-center`}
         onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
       >
         {/* MAIN HEADER */}
-        <div className="z-10 mt-3 md:basis-3/5">
+        <div className="z-10 md:mt-[125px] mt-[50px] md:basis-4/5">
           {/* HEADINGS */}
           <motion.div
-            className="md:-mt-20"
+            className="md:-mt-20 "
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
@@ -99,7 +99,7 @@ const Home = ({ setSelectedPage }: Props) => {
         </div>
 
         {/* IMAGE  */}
-        <div className="flex basis-2/5 md:basis-3/5 justify-center md:z-10 md:ml-40 md:mt-0 mt-11 md:justify-items-end">
+        <div className="flex basis-2/5 md:basis-3/5 justify-center md:z-10 md:ml-40 md:mt-0 mt-5 md:justify-items-end">
           <img
             src={HomeImage}
             alt="home-page-graphic"
