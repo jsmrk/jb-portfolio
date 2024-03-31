@@ -49,12 +49,33 @@ const Skills = ({ setSelectedPage }: Props) => {
         className={`${isAboveLargeScreen ? " w-4/6 justify-between" : " w-5/6 items-center justify-center"}  md:mt-0 mt-[80px] mx-auto h-full`}
         onViewportEnter={() => setSelectedPage(SelectedPage.MySkills)}
       >
-        <h2 className="text-4xl font-bold mb-1">
-          My <span className="text-primary-100">Skills</span>
-        </h2>
-        <p>Technologies I have used and practiced</p>
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.3 }}
+          transition={{ duration: 1.5 }}
+          variants={{
+            hidden: { opacity: 0, x: -50 },
+            visible: { opacity: 1, x: 0 },
+          }}
+        >
+          <h2 className="text-4xl font-bold mb-1">
+            My <span className="text-primary-100">Skills</span>
+          </h2>
+          <p>Technologies I have used and practiced</p>
+        </motion.div>
         <div className="md:mt-[75px] mt-5 md:w-full">
-          <div className={`${cardsGrid5}`}>
+          <motion.div
+            className={`${cardsGrid5}`}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.3 }}
+            transition={{ duration: 1.5 }}
+            variants={{
+              hidden: { opacity: 0, x: -50 },
+              visible: { opacity: 1, x: 0 },
+            }}
+          >
             <SkillCard>
               <FaHtml5 className="h-10 w-auto" />
               <p>HTML</p>
@@ -75,9 +96,19 @@ const Skills = ({ setSelectedPage }: Props) => {
               <SiTypescript className="h-10 w-auto" />
               <p>TypeScript</p>
             </SkillCard>
-          </div>
+          </motion.div>
 
-          <div className={`${cardsGrid4}`}>
+          <motion.div
+            className={`${cardsGrid4}`}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.3 }}
+            transition={{ duration: 1.5, delay: 0.2 }}
+            variants={{
+              hidden: { opacity: 0, x: 50 },
+              visible: { opacity: 1, x: 0 },
+            }}
+          >
             <SkillCard>
               <FaReact className="h-10 w-auto" />
               <p>React</p>
@@ -94,9 +125,19 @@ const Skills = ({ setSelectedPage }: Props) => {
               <IoLogoFirebase className="h-10 w-auto" />
               <p>Firebase</p>
             </SkillCard>
-          </div>
+          </motion.div>
 
-          <div className={`${cardsGrid5}`}>
+          <motion.div
+            className={`${cardsGrid5}`}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.3 }}
+            transition={{ duration: 1.5, delay: 0.4 }}
+            variants={{
+              hidden: { opacity: 0, x: -50 },
+              visible: { opacity: 1, x: 0 },
+            }}
+          >
             <SkillCard>
               <SiSupabase className="h-10 w-auto" />
               <p>SupaBase</p>
@@ -117,9 +158,19 @@ const Skills = ({ setSelectedPage }: Props) => {
               <FaJava className="h-10 w-auto" />
               <p>Java</p>
             </SkillCard>
-          </div>
+          </motion.div>
 
-          <div className={`${cardsGrid4}`}>
+          <motion.div
+            className={`${cardsGrid4}`}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.3 }}
+            transition={{ duration: 1.5, delay: 0.6 }}
+            variants={{
+              hidden: { opacity: 0, x: 50 },
+              visible: { opacity: 1, x: 0 },
+            }}
+          >
             <SkillCard>
               <FaNodeJs className="h-10 w-auto" />
               <p>NodeJs</p>
@@ -136,7 +187,7 @@ const Skills = ({ setSelectedPage }: Props) => {
               <FaBootstrap className="h-10 w-auto" />
               <p>Bootstrap </p>
             </SkillCard>
-          </div>
+          </motion.div>
         </div>
       </motion.div>
     </section>
