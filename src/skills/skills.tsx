@@ -43,7 +43,7 @@ const Skills = ({ setSelectedPage }: Props) => {
   return (
     <section
       id="myskills"
-      className={`h-full mx-auto ${isAboveMediumScreen ? "mt-[50px]" : "mt-[600px]"}`}
+      className={`h-full mx-auto ${isAboveMediumScreen ? "pt-[150px]" : "pt-[600px]"}`}
     >
       <motion.div
         className={`${isAboveLargeScreen ? " w-4/6 justify-between" : " w-5/6 items-center justify-center"}  md:mt-0 mt-[80px] mx-auto h-full`}
