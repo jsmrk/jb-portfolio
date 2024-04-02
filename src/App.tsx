@@ -7,6 +7,7 @@ import Home from "./home/home";
 import AboutMe from "./aboutMe/aboutMe";
 import Skills from "./mySkills/skills";
 import MyProjects from "./myProjects/projects";
+import ContactMe from "./contactMe/contactMe";
 
 function App() {
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(
@@ -37,6 +38,7 @@ function App() {
       <AboutMe setSelectedPage={setSelectedPage} />
       <Skills setSelectedPage={setSelectedPage} />
       <MyProjects setSelectedPage={setSelectedPage} />
+      <ContactMe setSelectedPage={setSelectedPage} />
     </>
   );
 }
