@@ -18,7 +18,7 @@ const Home = ({ setSelectedPage }: Props) => {
   return (
     <section
       id="home"
-      className="gap-16 bg-gray-20 pt-10 md:h-4/5 md:mt-11 md:pb-0"
+      className="bg-gray-20 md:h-4/5 md:pt-[125px] pt-11 md:pb-0"
     >
       {/* IMAGE AND MAIN HEADER*/}
       <motion.div
@@ -40,7 +40,7 @@ const Home = ({ setSelectedPage }: Props) => {
             }}
           >
             <div className="relative">
-              <div className="before:absolute before:-top-20 before:-left-20 before:z-[-1] md:before:content-evolvetext ">
+              <div className="before:absolute before:-top-20 before:-left-20 before:z-[-1] md:before:content-evolvetext md:pb-0 pb-11 ">
                 <img src={HomeText} alt="home-page-text" />
               </div>
             </div>

@@ -13,19 +13,19 @@ const AboutMe = ({ setSelectedPage }: Props) => {
   const isAboveLargeScreen = useMediaQuery("(min-width: 1440px)");
 
   return (
-    <section id="aboutme" className="h-4/5 mx-auto">
+    <section id="aboutme" className="mx-auto">
       <div>
         <img src={TopWave} alt="" />
       </div>
       <div className=" bg-bg-secondary py-10 md:pb-0 ">
         <motion.div
-          className={`${isAboveLargeScreen ? " w-4/6 justify-between" : " w-5/6 items-center justify-center"} md:flex md:mt-0 mt-[80px] mx-auto h-full items-center justify-center`}
+          className={`${isAboveLargeScreen ? " w-4/6 justify-between" : " w-5/6 items-center justify-center"} md:flex md:mt-0 mt-[50px] mx-auto h-full items-center justify-center`}
           onViewportEnter={() => setSelectedPage(SelectedPage.AboutMe)}
         >
           <div className="md:flex md:justify-between items-center md:gap-[150px]">
             {/* LEFT DIV */}
             <motion.div
-              className="flex justify-center"
+              className="justify-center md:pb-0 pb-11 md:block hidden"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: false, amount: 0.3 }}

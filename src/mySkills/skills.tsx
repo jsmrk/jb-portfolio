@@ -33,7 +33,6 @@ type Props = { setSelectedPage: (value: SelectedPage) => void };
 
 const Skills = ({ setSelectedPage }: Props) => {
   const isAboveLargeScreen = useMediaQuery("(min-width: 1440px)");
-  const isAboveMediumScreen = useMediaQuery("(min-width: 1060px)");
 
   const cardsGrid5 =
     "md:grid md:grid-cols-5 md:gap-5 md:mt-5 justify-center items-center ";
@@ -41,12 +40,9 @@ const Skills = ({ setSelectedPage }: Props) => {
     "md:grid md:grid-cols-4 md:gap-5 md:mt-5 justify-center items-center md:px-[100px]";
 
   return (
-    <section
-      id="myskills"
-      className={`m:h-full mx-auto ${isAboveMediumScreen ? "pt-[150px]" : "pt-[500px]"} pb-[150px]`}
-    >
+    <section id="myskills">
       <motion.div
-        className={`${isAboveLargeScreen ? " w-4/6 justify-between" : " w-5/6 items-center justify-center"}  md:mt-0 mt-[80px] mx-auto h-full`}
+        className={`${isAboveLargeScreen ? " w-4/6 justify-between" : " w-5/6 items-center justify-center"}  md:mt-0 pt-[100px] pb-[150px] mx-auto`}
         onViewportEnter={() => setSelectedPage(SelectedPage.MySkills)}
       >
         <motion.div
