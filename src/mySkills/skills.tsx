@@ -38,12 +38,12 @@ const Skills = ({ setSelectedPage }: Props) => {
   const cardsGrid5 =
     "md:grid md:grid-cols-5 md:gap-5 md:mt-5 justify-center items-center ";
   const cardsGrid4 =
-    "md:grid md:grid-cols-4 md:gap-5 md:mt-5 justify-center items-center md:px-[100px] ";
+    "md:grid md:grid-cols-4 md:gap-5 md:mt-5 justify-center items-center md:px-[100px]";
 
   return (
     <section
       id="myskills"
-      className={`h-full mx-auto ${isAboveMediumScreen ? "pt-[150px]" : "pt-[600px]"}`}
+      className={`m:h-full mx-auto ${isAboveMediumScreen ? "pt-[150px]" : "pt-[500px]"} pb-[150px]`}
     >
       <motion.div
         className={`${isAboveLargeScreen ? " w-4/6 justify-between" : " w-5/6 items-center justify-center"}  md:mt-0 mt-[80px] mx-auto h-full`}
@@ -66,7 +66,7 @@ const Skills = ({ setSelectedPage }: Props) => {
         </motion.div>
         <div className="md:mt-[75px] mt-5 md:w-full">
           <motion.div
-            className={`${cardsGrid5}`}
+            className={`${cardsGrid4}`}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: false, amount: 0.3 }}
@@ -92,14 +92,10 @@ const Skills = ({ setSelectedPage }: Props) => {
               <IoLogoJavascript className="h-10 w-auto" />
               <p>JavaScript</p>
             </SkillCard>
-            <SkillCard>
-              <SiTypescript className="h-10 w-auto" />
-              <p>TypeScript</p>
-            </SkillCard>
           </motion.div>
 
           <motion.div
-            className={`${cardsGrid4}`}
+            className={`${cardsGrid5}`}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: false, amount: 0.3 }}
@@ -125,10 +121,14 @@ const Skills = ({ setSelectedPage }: Props) => {
               <IoLogoFirebase className="h-10 w-auto" />
               <p>Firebase</p>
             </SkillCard>
+            <SkillCard>
+              <SiTypescript className="h-10 w-auto" />
+              <p>TypeScript</p>
+            </SkillCard>
           </motion.div>
 
           <motion.div
-            className={`${cardsGrid5}`}
+            className={`${cardsGrid4}`}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: false, amount: 0.3 }}
@@ -154,14 +154,10 @@ const Skills = ({ setSelectedPage }: Props) => {
               <FaAngular className="h-10 w-auto" />
               <p>Angular </p>
             </SkillCard>
-            <SkillCard>
-              <FaJava className="h-10 w-auto" />
-              <p>Java</p>
-            </SkillCard>
           </motion.div>
 
           <motion.div
-            className={`${cardsGrid4}`}
+            className={`md:grid md:grid-cols-3 md:gap-5 md:mt-5 justify-center items-center md:px-[200px]`}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: false, amount: 0.3 }}
@@ -172,6 +168,10 @@ const Skills = ({ setSelectedPage }: Props) => {
             }}
           >
             <SkillCard>
+              <FaJava className="h-10 w-auto" />
+              <p>Java</p>
+            </SkillCard>
+            <SkillCard>
               <FaNodeJs className="h-10 w-auto" />
               <p>NodeJs</p>
             </SkillCard>
@@ -179,6 +179,19 @@ const Skills = ({ setSelectedPage }: Props) => {
               <SiMongodb className="h-10 w-auto" />
               <p>Mongodb </p>
             </SkillCard>
+          </motion.div>
+
+          <motion.div
+            className={`md:grid md:grid-cols-2 md:gap-5 md:mt-5 justify-center items-center md:px-[300px]`}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.3 }}
+            transition={{ duration: 1.5, delay: 0.6 }}
+            variants={{
+              hidden: { opacity: 0, x: 50 },
+              visible: { opacity: 1, x: 0 },
+            }}
+          >
             <SkillCard>
               <IoLogoFigma className="h-10 w-auto" />
               <p>Figma </p>

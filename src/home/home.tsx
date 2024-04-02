@@ -40,7 +40,7 @@ const Home = ({ setSelectedPage }: Props) => {
             }}
           >
             <div className="relative">
-              <div className="before:absolute before:-top-20 before:-left-20 before:z-[-1] md:before:content-evolvetext">
+              <div className="before:absolute before:-top-20 before:-left-20 before:z-[-1] md:before:content-evolvetext ">
                 <img src={HomeText} alt="home-page-text" />
               </div>
             </div>
@@ -116,7 +116,7 @@ const Home = ({ setSelectedPage }: Props) => {
           <img
             src={HomeImage}
             alt="home-page-graphic"
-            className="sm:max-w-[400px]"
+            className="sm:max-w-[400px] "
           />
         </motion.div>
       </motion.div>
