@@ -37,14 +37,23 @@ function ProjectsList() {
               ))}
             </div>
             <div className="flex gap-3 items-end justify-end">
-              <button className="flex gap-2 justify-center items-end bg-black rounded-xl text-white py-2 px-5 text-xs text-center hover:bg-primary-100 transition-all duration-300 ">
+              <a
+                href={project.ghLink}
+                target="_blank"
+                className="flex gap-2 justify-center items-end bg-black rounded-xl text-white py-2 px-5 text-xs text-center hover:bg-primary-100 transition-all duration-300 "
+              >
                 <FaGithub className="size-4" />
                 Github
-              </button>
-              <button className="flex gap-2 justify-center items-end bg-black rounded-xl text-white py-2 px-5 text-xs text-center hover:bg-primary-100 transition-all duration-300">
+              </a>
+
+              <a
+                href={project.demoLink}
+                target="_blank"
+                className="flex gap-2 justify-center items-end bg-black rounded-xl text-white py-2 px-5 text-xs text-center hover:bg-primary-100 transition-all duration-300"
+              >
                 <BsArrowUpRightCircleFill className="size-4" />
                 Demo
-              </button>
+              </a>
             </div>
           </div>
         </div>

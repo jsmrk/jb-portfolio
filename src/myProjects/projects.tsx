@@ -14,7 +14,7 @@ const MyProjects = ({ setSelectedPage }: Props) => {
   const isAboveLargeScreen = useMediaQuery("(min-width: 1440px)");
 
   return (
-    <section id="myprojects" className="">
+    <section id="myprojects" className="relative">
       <motion.div
         onViewportEnter={() => setSelectedPage(SelectedPage.Projects)}
       >
@@ -45,10 +45,11 @@ const MyProjects = ({ setSelectedPage }: Props) => {
             </div>
           </div>
         </div>
+
         <div>
           <img src={BottomWave} alt="top-wave" />
         </div>
-      </motion.div>
+      </motion.div>{" "}
     </section>
   );
 };
