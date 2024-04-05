@@ -70,12 +70,17 @@ const Navbar = ({ selectedPage, setSelectedPage, isTopOfPage }: Props) => {
                     setSelectedPage={setSelectedPage}
                   />
                 </div>
-                <ActionButton setSelectedPage={setSelectedPage}>
-                  <p className="text-xs">Download CV</p>
+
+                <a
+                  href="https://drive.google.com/file/d/1TQWVO9tGGrPUkW2eFK0DzUlP0csTbopL/view"
+                  target="_blank"
+                  className="bg-primary-100 rounded-2xl text-white py-2.5 px-7 hover:bg-white hover:text-primary-100 hover:cursor-pointer transition duration-300 flex items-center justify-between gap-3"
+                >
+                  <p className="text-xs">Download Resume</p>
                   <div>
                     <ArrowDownTrayIcon className="h-3 w-4" />
                   </div>
-                </ActionButton>
+                </a>
               </div>
             </div>
           </div>
