@@ -1,6 +1,4 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import { useState, useEffect } from "react";
-import "./App.css";
 import { SelectedPage } from "./shared/types";
 import Navbar from "./navBar/navBar";
 import Home from "./home/home";
