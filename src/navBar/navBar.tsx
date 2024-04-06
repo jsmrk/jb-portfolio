@@ -1,11 +1,7 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable @typescript-eslint/ban-types */
-
 import { useState } from "react";
 import Link from "./link";
 import { SelectedPage } from "@/shared/types";
 import useMediaQuery from "@/hooks/useMediaQuery";
-import ActionButton from "@/shared/actionButton";
 
 import {
   Bars3Icon,

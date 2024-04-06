@@ -1,12 +1,9 @@
-/* eslint-disable @typescript-eslint/ban-types */
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import { SelectedPage } from "@/shared/types";
 import { motion } from "framer-motion";
 
 import useMediaQuery from "@/hooks/useMediaQuery";
 import HomeImage from "@/assets/hero-image.png";
 import HomeText from "@/assets/hero-text.png";
-import ActionButton from "@/shared/actionButton";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 
 type Props = { setSelectedPage: (value: SelectedPage) => void };
