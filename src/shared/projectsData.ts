@@ -1,6 +1,12 @@
 import fitingym from "@/assets/projects/fitingym.png";
 import todayilearn from "@/assets/projects/today-i-learn.png";
 import enver from "/src/assets/projects/enver.png";
+import swipe from "/src/assets/projects/swipe.png";
+import icareweb from "/src/assets/projects/icare-web.png";
+import icare from "/src/assets/projects/icare.png";
+import quizler from "/src/assets/projects/quizler.png";
+import francos from "/src/assets/projects/francos.png";
+import cashierio from "/src/assets/projects/cashierio.png";
 
 export const MyProjectsList = [
   {
@@ -34,8 +40,8 @@ export const MyProjectsList = [
     demoLink: "https://jsmrk.github.io/enver/",
   },
   {
-    image: "src/assets/projects/swipe.png",
-    name: "Enver",
+    image: swipe,
+    name: "Swipe",
     system: "(Landing Page for Swipe)",
     description:
       "Designed a compelling landing page for Swipe, a powerful platform empowering businesses to streamline their online financial transactions globally.",
@@ -44,7 +50,7 @@ export const MyProjectsList = [
     demoLink: "https://jsmrk.github.io/swipe/",
   },
   {
-    image: "src/assets/projects/icare-web.png",
+    image: icareweb,
     name: "iCare Admin ",
     system: "(A Report Managment System)",
     description:
@@ -54,7 +60,7 @@ export const MyProjectsList = [
     // demoLink: "",
   },
   {
-    image: "src/assets/projects/icare.png",
+    image: icare,
     name: "iCare Tagum ",
     system: "(A Report Managment System)",
     description:
@@ -64,7 +70,7 @@ export const MyProjectsList = [
     // demoLink: "",
   },
   {
-    image: "src/assets/projects/quizler.png",
+    image: quizler,
     name: "Quizler ",
     system: "(A Quiz Game)",
     description:
@@ -74,7 +80,7 @@ export const MyProjectsList = [
     // demoLink: "",
   },
   {
-    image: "src/assets/projects/francos.png",
+    image: francos,
     name: "Restura",
     system: "(A Restaurant Management System)",
     description:
@@ -84,7 +90,7 @@ export const MyProjectsList = [
     // demoLink: "",
   },
   {
-    image: "src/assets/projects/cashierio.png",
+    image: cashierio,
     name: "Cashierio",
     system: "(A Store Management System)",
     description:
