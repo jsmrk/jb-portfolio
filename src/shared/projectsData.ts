@@ -1,6 +1,10 @@
+import fitingym from "@/assets/projects/fitingym.png";
+import todayilearn from "@/assets/projects/today-i-learn.png";
+import enver from "/src/assets/projects/enver.png";
+
 export const MyProjectsList = [
   {
-    image: "src/assets/projects/fitingym.png",
+    image: fitingym,
     name: "Fitin Gym",
     system: "(Landing Page for a gym business)",
     description:
@@ -10,7 +14,7 @@ export const MyProjectsList = [
     demoLink: "https://jsmrk.github.io/fitin_gym/",
   },
   {
-    image: "src/assets/projects/today-i-learn.png",
+    image: todayilearn,
     name: "Today I Learn",
     system: "(Discover interesting facts or post your own)",
     description:
@@ -20,7 +24,7 @@ export const MyProjectsList = [
     demoLink: "https://jsmrk.github.io/today-i-learn/",
   },
   {
-    image: "src/assets/projects/enver.png",
+    image: enver,
     name: "Enver",
     system: "(Landing Page for a digital studio)",
     description:
