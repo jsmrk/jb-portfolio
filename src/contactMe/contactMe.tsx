@@ -34,7 +34,7 @@ const ContactMe = ({ setSelectedPage }: Props) => {
             </div>
           </div>
         </div>
-        <div className="md:flex justify-center items-center gap-5 w-3/5 mx-auto">
+        {/* <div className="md:flex justify-center items-center gap-5 w-3/5 mx-auto">
           <input
             type="text"
             placeholder="Email"
@@ -43,18 +43,24 @@ const ContactMe = ({ setSelectedPage }: Props) => {
           <button className=" bg-primary-100 rounded-xl text-white py-2.5 px-7 hover:bg-white hover:text-primary-100 hover:cursor-pointer transition duration-300 flex items-center justify-between gap-3 mt-5 md:mt-0 hover:font-bold">
             Contact Me
           </button>
-        </div>
-        <div className="flex items-center justify-center my-11 gap-8">
-          <a href="" target="_blank">
+        </div> */}
+        <div className="flex items-center justify-center my-11 gap-8 bg-primary-300 rounded-full py-5 mx-auto md:w-2/6">
+          <a href="https://www.facebook.com/jb.dev.freelancer/" target="_blank">
             <FaFacebook className="size-11" />
           </a>
-          <a href="" target="_blank">
+          <a href="https://github.com/jsmrk" target="_blank">
             <FaGithub className="size-11" />
           </a>
-          <a href="" target="_blank">
+          <a
+            href="https://www.linkedin.com/in/jess-mark-baguio-980a102a7/"
+            target="_blank"
+          >
             <FaLinkedin className="size-11" />
           </a>
-          <a href="" target="_blank">
+          <a
+            href="https://www.upwork.com/freelancers/~01026d904ced9e3b13"
+            target="_blank"
+          >
             <SiUpwork className="size-11" />
           </a>
         </div>

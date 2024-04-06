@@ -84,7 +84,7 @@ const Home = ({ setSelectedPage }: Props) => {
           >
             <ActionButton setSelectedPage={setSelectedPage}>
               <AnchorLink
-                className="font-bold "
+                className="font-bold"
                 onClick={() => setSelectedPage(SelectedPage.Contact)}
                 href={`${SelectedPage.Contact}`}
               >
@@ -92,11 +92,10 @@ const Home = ({ setSelectedPage }: Props) => {
               </AnchorLink>
             </ActionButton>
             <AnchorLink
-              className="text-sm font-bold text-primary-500 underline hover:text-primary-100"
-              onClick={() => setSelectedPage(SelectedPage.Projects)}
-              href={`${SelectedPage.Projects}`}
+              href="#myprojects"
+              className="text-sm font-bold text-primary-500 hover:text-primary-100"
             >
-              <p>See Projects</p>
+              See Projects
             </AnchorLink>
           </motion.div>
         </div>
