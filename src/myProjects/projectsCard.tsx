@@ -22,7 +22,7 @@ function ProjectsList() {
         >
           <div className="hover:transition-transform hover:scale-110 duration-200 md:h-[150px] sm:h-[250px] h-[150px] ">
             <img
-              src={project.image}
+              src={`${project.image}`}
               alt=""
               className="object-cover w-full h-full"
             />
