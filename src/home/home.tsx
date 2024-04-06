@@ -82,15 +82,12 @@ const Home = ({ setSelectedPage }: Props) => {
               visible: { opacity: 1, x: 0 },
             }}
           >
-            <ActionButton setSelectedPage={setSelectedPage}>
-              <AnchorLink
-                className="font-bold"
-                onClick={() => setSelectedPage(SelectedPage.Contact)}
-                href={`${SelectedPage.Contact}`}
-              >
-                Hire me
-              </AnchorLink>
-            </ActionButton>
+            <AnchorLink
+              href="#contactme"
+              className=" bg-primary-100 rounded-2xl text-white py-2 px-10 hover:bg-white hover:text-primary-100 hover:cursor-pointer transition duration-300 flex items-center justify-between gap-3"
+            >
+              Hire Me
+            </AnchorLink>
             <AnchorLink
               href="#myprojects"
               className="text-sm font-bold text-primary-500 hover:text-primary-100"

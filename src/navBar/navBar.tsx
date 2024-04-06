@@ -32,7 +32,7 @@ const Navbar = ({ selectedPage, setSelectedPage, isTopOfPage }: Props) => {
     : "drop-shadow py-6 bg-bg-primary";
 
   return (
-    <nav>
+    <nav className="bg-black ">
       <div
         className={`${navbarSettings} ${flexBetween} fixed w-full top-0 z-30 `}
       >

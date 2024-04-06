@@ -1,43 +1,27 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import useMediaQuery from "@/hooks/useMediaQuery";
 import { SelectedPage } from "@/shared/types";
 import { motion } from "framer-motion";
-import SkillCard from "./skillCard";
-import { GrMysql } from "react-icons/gr";
-import {
-  IoLogoCss3,
-  IoLogoJavascript,
-  IoLogoFirebase,
-  IoLogoFigma,
-} from "react-icons/io5";
-import {
-  FaHtml5,
-  FaReact,
-  FaGithub,
-  FaJava,
-  FaAngular,
-  FaNodeJs,
-  FaBootstrap,
-} from "react-icons/fa";
-
-import {
-  SiTailwindcss,
-  SiTypescript,
-  SiFlutter,
-  SiVisualbasic,
-  SiSupabase,
-  SiMongodb,
-} from "react-icons/si";
+import { SkillsList } from "@/shared/skillsData";
+import { useState } from "react";
 
 type Props = { setSelectedPage: (value: SelectedPage) => void };
 
 const Skills = ({ setSelectedPage }: Props) => {
-  const isAboveLargeScreen = useMediaQuery("(min-width: 1440px)");
+  const [hoveredDivIndex, setHoveredDivIndex] = useState<number | null>(null);
 
-  const cardsGrid5 =
-    "md:grid md:grid-cols-5 md:gap-5 md:mt-5 justify-center items-center ";
-  const cardsGrid4 =
-    "md:grid md:grid-cols-4 md:gap-5 md:mt-5 justify-center items-center md:px-[100px]";
+  const handleMouseEnter = (i: number) => {
+    setHoveredDivIndex(i);
+  };
+
+  const handleMouseLeave = () => {
+    setHoveredDivIndex(null);
+  };
+
+  const isAboveLargeScreen = useMediaQuery("(min-width: 1440px)");
+  // const cardsGrid5 =
+  //   "md:grid md:grid-cols-5 md:gap-5 md:mt-5 justify-center items-center ";
+  // const cardsGrid4 =
+  //   "md:grid md:grid-cols-4 md:gap-5 md:mt-5 justify-center items-center md:px-[100px]";
 
   return (
     <section id="myskills">
@@ -56,147 +40,36 @@ const Skills = ({ setSelectedPage }: Props) => {
           }}
         >
           <h2 className="text-4xl font-bold mb-1">
-            My <span className="text-primary-100">Skills</span>
+            <span className="text-primary-100">Technologies</span>
           </h2>
-          <p>Technologies I have used and practiced</p>
+          <p>These are the technologies I have tried using</p>
         </motion.div>
-        <div className="md:mt-[75px] mt-5 md:w-full">
-          <motion.div
-            className={`${cardsGrid4}`}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: false, amount: 0.3 }}
-            transition={{ duration: 1.5 }}
-            variants={{
-              hidden: { opacity: 0, x: -50 },
-              visible: { opacity: 1, x: 0 },
-            }}
-          >
-            <SkillCard>
-              <FaHtml5 className="h-10 w-auto" />
-              <p>HTML</p>
-            </SkillCard>
-            <SkillCard>
-              <IoLogoCss3 className="h-10 w-auto" />
-              <p>CSS</p>
-            </SkillCard>{" "}
-            <SkillCard>
-              <SiTailwindcss className="h-10 w-auto" />
-              <p>Tailwind</p>
-            </SkillCard>
-            <SkillCard>
-              <IoLogoJavascript className="h-10 w-auto" />
-              <p>JavaScript</p>
-            </SkillCard>
-          </motion.div>
-
-          <motion.div
-            className={`${cardsGrid5}`}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: false, amount: 0.3 }}
-            transition={{ duration: 1.5, delay: 0.2 }}
-            variants={{
-              hidden: { opacity: 0, x: 50 },
-              visible: { opacity: 1, x: 0 },
-            }}
-          >
-            <SkillCard>
-              <FaReact className="h-10 w-auto" />
-              <p>React</p>
-            </SkillCard>
-            <SkillCard>
-              <SiFlutter className="h-10 w-auto" />
-              <p>Flutter</p>
-            </SkillCard>
-            <SkillCard>
-              <SiVisualbasic className="h-10 w-auto" />
-              <p>VB.net</p>
-            </SkillCard>
-            <SkillCard>
-              <IoLogoFirebase className="h-10 w-auto" />
-              <p>Firebase</p>
-            </SkillCard>
-            <SkillCard>
-              <SiTypescript className="h-10 w-auto" />
-              <p>TypeScript</p>
-            </SkillCard>
-          </motion.div>
-
-          <motion.div
-            className={`${cardsGrid4}`}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: false, amount: 0.3 }}
-            transition={{ duration: 1.5, delay: 0.4 }}
-            variants={{
-              hidden: { opacity: 0, x: -50 },
-              visible: { opacity: 1, x: 0 },
-            }}
-          >
-            <SkillCard>
-              <SiSupabase className="h-10 w-auto" />
-              <p>SupaBase</p>
-            </SkillCard>
-            <SkillCard>
-              <GrMysql className="h-10 w-auto" />
-              <p>MySQL</p>
-            </SkillCard>
-            <SkillCard>
-              <FaGithub className="h-10 w-auto" />
-              <p>GitHub</p>
-            </SkillCard>
-            <SkillCard>
-              <FaAngular className="h-10 w-auto" />
-              <p>Angular </p>
-            </SkillCard>
-          </motion.div>
-
-          <motion.div
-            className={`md:grid md:grid-cols-3 md:gap-5 md:mt-5 justify-center items-center md:px-[200px]`}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: false, amount: 0.3 }}
-            transition={{ duration: 1.5, delay: 0.6 }}
-            variants={{
-              hidden: { opacity: 0, x: 50 },
-              visible: { opacity: 1, x: 0 },
-            }}
-          >
-            <SkillCard>
-              <FaJava className="h-10 w-auto" />
-              <p>Java</p>
-            </SkillCard>
-            <SkillCard>
-              <FaNodeJs className="h-10 w-auto" />
-              <p>NodeJs</p>
-            </SkillCard>
-            <SkillCard>
-              <SiMongodb className="h-10 w-auto" />
-              <p>Mongodb </p>
-            </SkillCard>
-          </motion.div>
-
-          <motion.div
-            className={`md:grid md:grid-cols-2 md:gap-5 md:mt-5 justify-center items-center md:px-[300px]`}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: false, amount: 0.3 }}
-            transition={{ duration: 1.5, delay: 0.6 }}
-            variants={{
-              hidden: { opacity: 0, x: 50 },
-              visible: { opacity: 1, x: 0 },
-            }}
-          >
-            <SkillCard>
-              <IoLogoFigma className="h-10 w-auto" />
-              <p>Figma </p>
-            </SkillCard>
-            <SkillCard>
-              <FaBootstrap className="h-10 w-auto" />
-              <p>Bootstrap </p>
-            </SkillCard>
-          </motion.div>
+        <div className="mt-11 sm:flex flex-wrap gap-8 justify-center items-center">
+          {SkillsList.map((tech, i) => (
+            <motion.div
+              id="skillCard"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: false, amount: 0.2 }}
+              transition={{ duration: 0.5, delay: i * 0.1 }}
+              variants={{
+                hidden: { opacity: 0 },
+                visible: { opacity: 1 },
+              }}
+              key={tech.color && tech.name}
+              className={`mt-5 sm:mt-0 flex items-center justify-center gap-3 bg-primary-300 text-white rounded-full py-5 px-20 hover:cursor-pointer hover:scale-110 hover:text-white transition-all duration-300`}
+              onMouseEnter={() => handleMouseEnter(i)}
+              onMouseLeave={handleMouseLeave}
+              style={{
+                backgroundColor: hoveredDivIndex === i ? tech.color : "bg",
+              }}
+            >
+              <div className="text-3xl">
+                <tech.icon />
+              </div>
+              <p className="capitalize">{tech.name}</p>
+            </motion.div>
+          ))}
         </div>
       </motion.div>
     </section>

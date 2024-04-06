@@ -24,13 +24,13 @@ const ContactMe = ({ setSelectedPage }: Props) => {
         </p>
         <div className="flex items-center justify-center my-11">
           <div>
-            <div className="flex items-center gap-3 text-2xl">
+            <div className="flex items-center gap-5 md:text-2xl">
               <MdEmail className="size-11" />
               <p>jsmrkbaguio@gmail.com</p>
             </div>
-            <div className="flex items-center gap-3 text-2xl mt-3">
+            <div className="flex items-center gap-5 md:text-2xl mt-3">
               <MdCall className="size-11" />
-              <p>09296651214</p>
+              <p>09926890336</p>
             </div>
           </div>
         </div>
@@ -46,22 +46,22 @@ const ContactMe = ({ setSelectedPage }: Props) => {
         </div> */}
         <div className="flex items-center justify-center my-11 gap-8 bg-primary-300 rounded-full py-5 mx-auto md:w-2/6">
           <a href="https://www.facebook.com/jb.dev.freelancer/" target="_blank">
-            <FaFacebook className="size-11" />
+            <FaFacebook className="md:size-11 size-8" />
           </a>
           <a href="https://github.com/jsmrk" target="_blank">
-            <FaGithub className="size-11" />
+            <FaGithub className="md:size-11 size-8" />
           </a>
           <a
             href="https://www.linkedin.com/in/jess-mark-baguio-980a102a7/"
             target="_blank"
           >
-            <FaLinkedin className="size-11" />
+            <FaLinkedin className="md:size-11 size-8" />
           </a>
           <a
             href="https://www.upwork.com/freelancers/~01026d904ced9e3b13"
             target="_blank"
           >
-            <SiUpwork className="size-11" />
+            <SiUpwork className="md:size-11 size-8" />
           </a>
         </div>
       </motion.div>

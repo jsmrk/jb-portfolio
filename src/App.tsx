@@ -29,7 +29,7 @@ function App() {
   }, []);
 
   return (
-    <>
+    <div className="overflow-hidden">
       <Navbar
         selectedPage={selectedPage}
         setSelectedPage={setSelectedPage}
@@ -41,7 +41,7 @@ function App() {
       <MyProjects setSelectedPage={setSelectedPage} />
       <ContactMe setSelectedPage={setSelectedPage} />
       <Footer />
-    </>
+    </div>
   );
 }
 
