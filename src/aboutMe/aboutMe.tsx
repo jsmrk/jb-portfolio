@@ -66,10 +66,10 @@ const AboutMe = ({ setSelectedPage }: Props) => {
                 <p className="text-l leading-relaxed">
                   My passion for programming ignited in high school, leading me
                   to build websites and apps for all devices. Freelancing honed
-                  my skills while I learned and earned. Now, A Computer Science
-                  graduate, I still dedicate my free time daily in learning to
-                  stay on the cutting edge, eager to contribute innovative
-                  experiences through technology.
+                  my skills while I learned and earned. I am now Graduating this
+                  year in my course of Computer Science , I still dedicate my
+                  free time daily in learning to stay on the cutting edge, eager
+                  to contribute innovative experiences through technology.
                 </p>
                 <div className="flex justify-end mt-6">
                   <img className="max-w-[100px]" src={Sign} alt="" />

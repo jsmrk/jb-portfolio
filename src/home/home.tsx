@@ -62,7 +62,7 @@ const Home = ({ setSelectedPage }: Props) => {
                 <span
                   className={`font-bold ${isBelowSmallScreen ? "text-xl" : "text-2xl"}`}
                 >
-                  a web and mobile developer
+                  A Front-End Web Developer
                 </span>
               </p>
             </motion.div>

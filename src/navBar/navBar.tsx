@@ -68,7 +68,7 @@ const Navbar = ({ selectedPage, setSelectedPage, isTopOfPage }: Props) => {
                 </div>
 
                 <a
-                  href="https://drive.google.com/file/d/1TQWVO9tGGrPUkW2eFK0DzUlP0csTbopL/view"
+                  href="https://drive.google.com/file/d/1cKKSxkwHDBKKu9TAVk70A2w8tjzkowRM/view?usp=sharing"
                   target="_blank"
                   className="bg-primary-100 rounded-2xl text-white py-2.5 px-7 hover:bg-white hover:text-primary-100 hover:cursor-pointer transition duration-300 flex items-center justify-between gap-3"
                 >
