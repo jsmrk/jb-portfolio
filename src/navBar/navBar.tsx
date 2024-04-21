@@ -68,7 +68,7 @@ const Navbar = ({ selectedPage, setSelectedPage, isTopOfPage }: Props) => {
                 </div>
 
                 <a
-                  href="https://drive.google.com/file/d/1cKKSxkwHDBKKu9TAVk70A2w8tjzkowRM/view?usp=sharing"
+                  href="https://drive.google.com/file/d/144y-M2C9fg5CksUhfzI_D2PqZU-IfM7b/view?usp=sharing"
                   target="_blank"
                   className="bg-primary-100 rounded-2xl text-white py-2.5 px-7 hover:bg-white hover:text-primary-100 hover:cursor-pointer transition duration-300 flex items-center justify-between gap-3"
                 >
@@ -96,11 +96,11 @@ const Navbar = ({ selectedPage, setSelectedPage, isTopOfPage }: Props) => {
 
       {/* MOBILE MENU MODAL */}
       {!isAboveMediumScreen && isMenuToggled && (
-        <div className="fixed right-0 bottom-0 z-40 h-full w-[300px] bg-primary-100 drop-shadow-xl">
+        <div className="fixed right-0 bottom-0 z-40 h-full w-[300px] bg-primary-300 drop-shadow-xl">
           {/* CLOSE ICON */}
           <div className="flex justify-end p-12">
             <button onClick={() => setIsMenuToggled(!isMenuToggled)}>
-              <XMarkIcon className="h-6 w-6 text-gray-400" />
+              <XMarkIcon className="h-6 w-6 text-white " />
             </button>
           </div>
 
@@ -131,6 +131,12 @@ const Navbar = ({ selectedPage, setSelectedPage, isTopOfPage }: Props) => {
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
+            <a
+              href="https://drive.google.com/file/d/144y-M2C9fg5CksUhfzI_D2PqZU-IfM7b/view?usp=sharing"
+              target="_blank"
+            >
+              <p className="text-2xl border-t-2 pt-7">Resume</p>
+            </a>
           </div>
           {/* <div className={`${flexBetween} gap-8`}>
           <p>Sign In</p>
