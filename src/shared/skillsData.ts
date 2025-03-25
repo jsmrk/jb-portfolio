@@ -18,7 +18,6 @@ import {
   SiTailwindcss as TailwindcssIcon,
   SiTypescript as TypescriptIcon,
   SiFlutter as FlutterIcon,
-  SiVisualbasic as VisualbasicIcon,
   SiSupabase as SupabaseIcon,
   SiMongodb as MongodbIcon,
 } from "react-icons/si";
@@ -87,11 +86,6 @@ export const SkillsList: {
     name: "angular",
     color: "#d9a3a8",
     icon: AngularIcon,
-  },
-  {
-    name: "vbnet",
-    color: "#d3b3d7",
-    icon: VisualbasicIcon,
   },
   {
     name: "mongodb",
