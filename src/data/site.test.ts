@@ -6,15 +6,23 @@ describe("site data", () => {
     expect(site.email).toContain("@");
   });
 
-  it("uses https for every social and resume link", () => {
+  it("uses https for every social link", () => {
     for (const social of site.socials) {
       expect(social.url).toMatch(/^https:\/\//);
       expect(social.label.length).toBeGreaterThan(0);
     }
-    expect(site.resumeUrl).toMatch(/^https:\/\//);
   });
 
-  it("navigates to the three page sections", () => {
-    expect(navItems.map((item) => item.id)).toEqual(["work", "about", "contact"]);
+  it("links the resume to the bundled PDF", () => {
+    expect(site.resumeUrl).toContain("Jess-Mark-Baguio-Resume.pdf");
+  });
+
+  it("navigates to the four page sections in scroll order", () => {
+    expect(navItems.map((item) => item.id)).toEqual([
+      "about",
+      "experience",
+      "work",
+      "contact",
+    ]);
   });
 });
