@@ -4,7 +4,8 @@ import react from "@vitejs/plugin-react";
 import { fileURLToPath, URL } from "node:url";
 
 export default defineConfig({
-  base: "/jb-portfolio/",
+  // GitHub Pages serves under /jb-portfolio/; Vercel serves at the root.
+  base: process.env.VERCEL ? "/" : "/jb-portfolio/",
   plugins: [react()],
   resolve: {
     alias: { "@": fileURLToPath(new URL("./src", import.meta.url)) },
