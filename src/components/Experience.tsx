@@ -21,7 +21,7 @@ function Experience() {
         <h2 className="font-serif text-3xl font-medium md:text-4xl">
           Work <em>experience</em>
         </h2>
-        <p className="kicker">2022 — 2026</p>
+        <p className="kicker">2022 — Present</p>
       </motion.div>
 
       <div ref={timelineRef} className="relative mt-10 md:pl-10">

@@ -9,9 +9,13 @@ import { projects } from "@/data/projects";
 import type { Project } from "@/types";
 
 // Per-project bento spans (applied from md up). Chosen so the 3-column grid
-// tiles with no gaps: each row of the nine cards sums to three columns.
+// tiles with no gaps: every row of the twelve cards sums to three columns
+// (2+1, 1+1+1, 1+2, 1+1+1, 2+1).
 const SPANS = [
   "md:col-span-2",
+  "",
+  "",
+  "",
   "",
   "",
   "md:col-span-2",
@@ -88,7 +92,7 @@ function Work() {
         <h2 className="font-serif text-3xl font-medium md:text-4xl">
           Personal <em>projects</em>
         </h2>
-        <p className="kicker">09 Projects — 2022–2026</p>
+        <p className="kicker">12 Projects — 2022–2026</p>
       </motion.div>
       <div className="mt-8 grid auto-rows-[20rem] grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
         {projects.map((project, i) => (

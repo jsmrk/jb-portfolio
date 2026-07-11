@@ -5,9 +5,9 @@ import type { Role } from "@/types";
 export const roles: Role[] = [
   {
     title: "Frontend Developer",
-    company: "Born Digital",
+    company: "Webee Labs (Born Digital, Malta)",
     type: "Full-time",
-    period: "Jun 2024 — Jul 2026",
+    period: "Jun 2024 — Present",
     location: "Remote",
     summary:
       "Building production web apps for fintech, banking, and healthcare companies in React and Next.js.",

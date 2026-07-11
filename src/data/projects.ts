@@ -8,9 +8,39 @@ import icareTagum from "@/assets/projects/icare.png";
 import quizler from "@/assets/projects/quizler.png";
 import restura from "@/assets/projects/francos.png";
 import cashierio from "@/assets/projects/cashierio.png";
+import memento from "@/assets/projects/memento.png";
+import unoTrading from "@/assets/projects/jb-trading.png";
+import motorpool from "@/assets/projects/um-mms.png";
 
-// All portfolio projects in display order; the last entry renders full-width.
+// All portfolio projects in display order, newest first.
 export const projects: Project[] = [
+  {
+    image: memento,
+    name: "Memento",
+    tagline: "Collaborative event photo albums",
+    description:
+      "Landing page for Memento, a mobile app where guests join a private album with a code and add their own photos — one event captured from every angle.",
+    technologies: ["Next.js", "React", "Tailwind"],
+    demoLink: "https://memento-app-landing.vercel.app/",
+  },
+  {
+    image: unoTrading,
+    name: "Uno Trading",
+    tagline: "A members-only trading platform",
+    description:
+      "A private trading platform for Uno Trading Capital Group, built around live scalping, with member accounts provisioned by an administrator.",
+    technologies: ["Next.js", "React", "Tailwind"],
+    demoLink: "https://jb-trading.vercel.app",
+  },
+  {
+    image: motorpool,
+    name: "Motorpool System",
+    tagline: "Vehicle fleet management for a university",
+    description:
+      "A motorpool management system for the University of Mindanao that tracks, schedules, and dispatches the institution's vehicle fleet.",
+    technologies: ["React", "Vite", "Tailwind"],
+    demoLink: "https://um-mms.vercel.app",
+  },
   {
     image: fitingym,
     name: "Fitin Gym",

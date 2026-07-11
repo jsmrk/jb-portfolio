@@ -2,8 +2,8 @@ import { describe, expect, it } from "vitest";
 import { projects } from "./projects";
 
 describe("projects data", () => {
-  it("contains all 9 projects with Cashierio as the closer", () => {
-    expect(projects).toHaveLength(9);
+  it("contains all 12 projects with Cashierio as the closer", () => {
+    expect(projects).toHaveLength(12);
     expect(projects[projects.length - 1].name).toBe("Cashierio");
   });
 
