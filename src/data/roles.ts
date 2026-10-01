@@ -4,8 +4,8 @@ import type { Role } from "@/types";
 // are kept anonymous in the accompanying "Selected client work" list.
 export const roles: Role[] = [
   {
-    title: "Frontend Developer",
-    company: "Webee Labs (Born Digital, Malta)",
+    title: "Software Engineer",
+    company: "Born Digital",
     type: "Full-time",
     period: "Jun 2024 — Present",
     location: "Remote",
