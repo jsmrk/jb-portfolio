@@ -11,9 +11,29 @@ import cashierio from "@/assets/projects/cashierio.png";
 import memento from "@/assets/projects/memento.png";
 import unoTrading from "@/assets/projects/jb-trading.png";
 import motorpool from "@/assets/projects/um-mms.png";
+import codeBoxStudios from "@/assets/projects/code-box-studios.webp";
+import oakBarrelCafe from "@/assets/projects/oak-barrel-cafe.webp";
 
 // All portfolio projects in display order, newest first.
 export const projects: Project[] = [
+  {
+    image: codeBoxStudios,
+    name: "Code Box Studios",
+    tagline: "A software studio's digital home",
+    description:
+      "A website for Code Box Studios showcasing its services and software projects through scroll-driven interactions, with editable content powered by Payload CMS.",
+    technologies: ["Next.js", "TypeScript", "Payload CMS"],
+    demoLink: "https://code-box-studios.vercel.app/",
+  },
+  {
+    image: oakBarrelCafe,
+    name: "OAK Barrel Cafe",
+    tagline: "An immersive coffee shop experience",
+    description:
+      "An interactive cafe website with a scroll-driven 3D coffee scene, photo gallery, and location information, backed by Payload CMS for content management.",
+    technologies: ["Next.js", "Three.js", "Payload CMS"],
+    demoLink: "https://coffee-shop-code-box-studios.vercel.app/",
+  },
   {
     image: memento,
     name: "Memento",
