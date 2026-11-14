@@ -59,7 +59,7 @@ export const projects: Project[] = [
     description:
       "A motorpool management system for the University of Mindanao that tracks, schedules, and dispatches the institution's vehicle fleet.",
     technologies: ["React", "Vite", "Tailwind"],
-    demoLink: "https://um-mms.vercel.app",
+    demoLink: "https://um-mms-web.vercel.app/",
   },
   {
     image: fitingym,
