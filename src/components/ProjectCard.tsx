@@ -1,67 +1,96 @@
-import { motion } from "framer-motion";
+import { useId } from "react";
+import { FiArrowUpRight, FiGithub } from "react-icons/fi";
 import type { Project } from "@/types";
 import { cn } from "@/lib/cn";
-import { fadeUp } from "@/lib/motion";
 
 type Props = {
   project: Project;
-  className?: string;
+  variant?: "lead" | "featured" | "archive";
 };
 
-// Bento card: a thumbnail header over a serif title, tagline, and tech line.
-// The whole card lifts with a shadow on hover.
-function ProjectCard({ project, className }: Props) {
-  const href = project.demoLink ?? project.ghLink;
-  const shell =
-    "group flex flex-col overflow-hidden rounded-xl border border-line bg-card p-3 transition-colors duration-300 hover:border-accent hover:shadow-lg";
-
-  const body = (
-    <>
-      <div className="relative flex-1 overflow-hidden rounded-lg bg-bg">
-        <img
-          src={project.image}
-          alt={project.name}
-          loading="lazy"
-          className="absolute inset-0 h-full w-full object-cover object-top grayscale transition-[transform,filter] duration-500 ease-out group-hover:scale-105 group-hover:grayscale-0"
-        />
-      </div>
-      <div className="mt-3 shrink-0">
-        <p className="font-serif text-lg leading-tight">
-          {project.name}
-          {href && (
-            <span
-              aria-hidden
-              className="ml-1 inline-block text-accent transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
-            >
-              ↗
-            </span>
-          )}
-        </p>
-        <p className="mt-1 line-clamp-1 text-sm text-muted">{project.tagline}</p>
-        <p className="kicker mt-2 tracking-[0.2em]">{project.technologies.join(" · ")}</p>
-      </div>
-    </>
-  );
-
-  if (href) {
-    return (
-      <motion.a
-        variants={fadeUp}
-        href={href}
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label={`${project.name} (opens in a new tab)`}
-        className={cn(shell, className)}
-      >
-        {body}
-      </motion.a>
-    );
-  }
+// Keep context and external actions separate so both demo and source remain
+// available without making the whole card an ambiguous click target.
+function ProjectCard({ project, variant = "archive" }: Props) {
+  const titleId = useId();
+  const previewHost = project.demoLink
+    ? new URL(project.demoLink).hostname
+    : null;
 
   return (
-    <motion.article variants={fadeUp} className={cn(shell, className)}>
-      {body}
-    </motion.article>
+    <article
+      className={cn("project-card", `project-card--${variant}`)}
+      aria-labelledby={titleId}
+    >
+      <figure className="project-card__preview">
+        <div className="project-card__window">
+          {variant !== "archive" && previewHost && (
+            <div className="project-card__browser" aria-hidden="true">
+              <span className="project-card__dots">
+                <i />
+                <i />
+                <i />
+              </span>
+              <span>{previewHost}</span>
+              <FiArrowUpRight size={12} />
+            </div>
+          )}
+          <div className="project-card__image-frame">
+            <img
+              src={project.image}
+              alt={`${project.name} interface preview`}
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </figure>
+      <div className="project-card__body">
+        {project.category && variant !== "archive" && (
+          <p className="project-card__category">{project.category}</p>
+        )}
+        <h3 id={titleId} className="project-card__title">
+          {project.name}
+        </h3>
+        <p className="project-card__description">{project.description}</p>
+        <ul
+          className="project-card__technologies"
+          aria-label={`Technologies used for ${project.name}`}
+        >
+          {project.technologies.map((technology) => (
+            <li key={technology}>{technology}</li>
+          ))}
+        </ul>
+        <div className="project-card__actions">
+          {project.demoLink && (
+            <a
+              href={project.demoLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Visit ${project.name} website (opens in a new tab)`}
+              className="project-link project-link--primary"
+            >
+              Visit website <FiArrowUpRight aria-hidden="true" size={16} />
+            </a>
+          )}
+          {project.ghLink && (
+            <a
+              href={project.ghLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`View code for ${project.name} (opens in a new tab)`}
+              className="project-link project-link--source"
+            >
+              <FiGithub aria-hidden="true" size={15} /> View code
+            </a>
+          )}
+          {!project.demoLink && !project.ghLink && (
+            <span className="project-card__preview-note">
+              Interface preview
+            </span>
+          )}
+        </div>
+      </div>
+    </article>
   );
 }
 

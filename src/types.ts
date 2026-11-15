@@ -5,6 +5,8 @@ export type Project = {
   description: string;
   image: string;
   technologies: string[];
+  featured?: boolean;
+  category?: string;
   ghLink?: string;
   demoLink?: string;
 };

@@ -47,10 +47,16 @@ function Hero() {
             </motion.span>
           </span>
         </h1>
-        <motion.div variants={fadeIn} className="mt-10 flex items-center gap-7 text-sm">
+        <motion.div
+          variants={fadeIn}
+          className="mt-10 flex flex-wrap items-center gap-x-7 gap-y-4 text-sm"
+        >
           <Magnetic>
-            <a href="#experience" className="link-grow text-accent">
-              See my work ↓
+            <a
+              href="#work"
+              className="inline-flex min-h-11 items-center justify-center rounded-full border border-accent bg-accent px-5 py-3 font-medium text-bg transition-opacity hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
+            >
+              Explore my projects
             </a>
           </Magnetic>
           <span className="text-muted">Open to Web Developer roles</span>

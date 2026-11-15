@@ -13,12 +13,15 @@ import unoTrading from "@/assets/projects/jb-trading.png";
 import motorpool from "@/assets/projects/um-mms.png";
 import codeBoxStudios from "@/assets/projects/code-box-studios.webp";
 import oakBarrelCafe from "@/assets/projects/oak-barrel-cafe.webp";
+import tally from "@/assets/projects/tally.webp";
 
 // All portfolio projects in display order, newest first.
 export const projects: Project[] = [
   {
     image: codeBoxStudios,
     name: "Code Box Studios",
+    featured: true,
+    category: "Studio website",
     tagline: "A software studio's digital home",
     description:
       "A website for Code Box Studios showcasing its services and software projects through scroll-driven interactions, with editable content powered by Payload CMS.",
@@ -28,6 +31,8 @@ export const projects: Project[] = [
   {
     image: oakBarrelCafe,
     name: "OAK Barrel Cafe",
+    featured: true,
+    category: "Interactive website",
     tagline: "An immersive coffee shop experience",
     description:
       "An interactive cafe website with a scroll-driven 3D coffee scene, photo gallery, and location information, backed by Payload CMS for content management.",
@@ -55,11 +60,24 @@ export const projects: Project[] = [
   {
     image: motorpool,
     name: "Motorpool System",
+    featured: true,
+    category: "Web application",
     tagline: "Vehicle fleet management for a university",
     description:
       "A motorpool management system for the University of Mindanao that tracks, schedules, and dispatches the institution's vehicle fleet.",
     technologies: ["React", "Vite", "Tailwind"],
     demoLink: "https://um-mms-web.vercel.app/",
+  },
+  {
+    image: tally,
+    name: "Tally",
+    featured: true,
+    category: "Personal finance app",
+    tagline: "Loans, bills, and repayments in one place",
+    description:
+      "A cross-platform finance tracker for money borrowed, money lent, and recurring bills, with installment schedules, partial payments, and balances kept separate by currency.",
+    technologies: ["Expo", "React Native", "TypeScript", "Supabase"],
+    demoLink: "https://tally-code-box-studios.vercel.app/",
   },
   {
     image: fitingym,

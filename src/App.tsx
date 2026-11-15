@@ -16,7 +16,7 @@ function App() {
       <DotGrid className="pointer-events-none fixed inset-0 -z-10" />
       <TerminalIntro />
       <Nav />
-      <main>
+      <main className="overflow-x-clip">
         <Hero />
         <About />
         <Experience />
