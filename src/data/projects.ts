@@ -178,6 +178,7 @@ export const projects: Project[] = [
   {
     image: oakBarrelCafe,
     name: "OAK Barrel Cafe",
+    featured: true,
     category: "Interactive website",
     tagline: "An immersive coffee shop experience",
     description:
