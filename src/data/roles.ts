@@ -7,7 +7,7 @@ export const roles: Role[] = [
     title: "Software Engineer",
     company: "Born Digital",
     type: "Full-time",
-    period: "Jun 2024 — Present",
+    period: "Jun 2024 — Nov 2026",
     location: "Remote",
     summary:
       "Building production web apps for fintech, banking, and healthcare companies in React and Next.js.",

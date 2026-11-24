@@ -14,6 +14,8 @@ import motorpool from "@/assets/projects/um-mms.png";
 import codeBoxStudios from "@/assets/projects/code-box-studios.webp";
 import oakBarrelCafe from "@/assets/projects/oak-barrel-cafe.webp";
 import tally from "@/assets/projects/tally.webp";
+import sentryPos from "@/assets/projects/sentry-pos.webp";
+import pikol from "@/assets/projects/pikol.webp";
 
 // All portfolio projects in display order, newest first.
 export const projects: Project[] = [
@@ -29,15 +31,26 @@ export const projects: Project[] = [
     demoLink: "https://code-box-studios.vercel.app/",
   },
   {
-    image: oakBarrelCafe,
-    name: "OAK Barrel Cafe",
+    image: sentryPos,
+    name: "Sentry POS",
     featured: true,
-    category: "Interactive website",
-    tagline: "An immersive coffee shop experience",
+    category: "Point-of-sale platform",
+    tagline: "Sales and stock, in view",
     description:
-      "An interactive cafe website with a scroll-driven 3D coffee scene, photo gallery, and location information, backed by Payload CMS for content management.",
-    technologies: ["Next.js", "Three.js", "Payload CMS"],
-    demoLink: "https://coffee-shop-code-box-studios.vercel.app/",
+      "A point-of-sale and business monitoring platform for Philippine stores, with sales, inventory, and multi-branch reporting.",
+    technologies: ["Next.js", "React", "NestJS", "PostgreSQL"],
+    demoLink: "https://sentry-pos-landing.vercel.app/",
+  },
+  {
+    image: pikol,
+    name: "Pikol",
+    featured: true,
+    category: "Court-booking platform",
+    tagline: "Find your next game",
+    description:
+      "A pickleball court marketplace where players discover venues, check availability, reserve courts, and manage their bookings.",
+    technologies: ["Next.js", "TypeScript", "Prisma", "Supabase"],
+    demoLink: "https://pikol-ph.vercel.app/",
   },
   {
     image: memento,
@@ -161,5 +174,15 @@ export const projects: Project[] = [
     description:
       "A store management system that keeps everything organized — inventory, sales, and sales tracking in one place.",
     technologies: ["VB.NET", "SQL"],
+  },
+  {
+    image: oakBarrelCafe,
+    name: "OAK Barrel Cafe",
+    category: "Interactive website",
+    tagline: "An immersive coffee shop experience",
+    description:
+      "An interactive cafe website with a scroll-driven 3D coffee scene, photo gallery, and location information, backed by Payload CMS for content management.",
+    technologies: ["Next.js", "Three.js", "Payload CMS"],
+    demoLink: "https://coffee-shop-code-box-studios.vercel.app/",
   },
 ];

@@ -2,9 +2,9 @@ import { describe, expect, it } from "vitest";
 import { projects } from "./projects";
 
 describe("projects data", () => {
-  it("contains all 15 projects with Cashierio as the closer", () => {
-    expect(projects).toHaveLength(15);
-    expect(projects[projects.length - 1].name).toBe("Cashierio");
+  it("contains all 17 projects with OAK Barrel Cafe as the closer", () => {
+    expect(projects).toHaveLength(17);
+    expect(projects[projects.length - 1].name).toBe("OAK Barrel Cafe");
   });
 
   it("has clean names with no stray whitespace", () => {
